@@ -1,0 +1,41 @@
+title: Lin Yang Sen's Music & Mood Station
+description: A personal space for music, guitar learning, and mood journaling
+url: https://tommy60718.github.io
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-paginate
+
+# Blog settings
+paginate: 5
+paginate_path: "/blog/page:num/"
+
+# Collections
+collections:
+  guitar-sheets:
+    output: true
+    permalink: /guitar-sheets/:path/
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      comments: true
+  - scope:
+      path: ""
+      type: "guitar-sheets"
+    values:
+      layout: "sheet"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page" 
