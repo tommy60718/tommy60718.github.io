@@ -8,23 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
   if (document.querySelector('.blog-index')) {
     // Blog-specific JS could go here
   }
-  
-  // Mobile menu toggle
-  initMobileMenu();
 });
-
-function initMobileMenu() {
-  const menuToggle = document.getElementById('menu-toggle');
-  const sidebar = document.querySelector('.sidebar');
-  const body = document.body;
-  
-  if (!menuToggle) return;
-  
-  menuToggle.addEventListener('click', function() {
-    sidebar.classList.toggle('active');
-    body.classList.toggle('menu-open');
-  });
-}
 
 function initMusicPlayer() {
   // Player elements
