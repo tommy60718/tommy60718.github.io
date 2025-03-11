@@ -1,1 +1,147 @@
- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Station | Lin Yang Sen's Music & Mood Station</title>
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/sidebar.css">
+  <link rel="stylesheet" href="/assets/css/music-station.css">
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Music Station | Lin Yang Sen’s Music &amp; Mood Station</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Music Station" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A personal space for music, guitar learning, and mood journaling" />
+<meta property="og:description" content="A personal space for music, guitar learning, and mood journaling" />
+<link rel="canonical" href="http://localhost:4000/music-station/" />
+<meta property="og:url" content="http://localhost:4000/music-station/" />
+<meta property="og:site_name" content="Lin Yang Sen’s Music &amp; Mood Station" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Music Station" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"A personal space for music, guitar learning, and mood journaling","headline":"Music Station","url":"http://localhost:4000/music-station/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+<body class="sidebar-layout">
+  <div class="site-container">
+    <!-- Left Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-profile">
+        <img src="/assets/images/profile.jpg" alt="Profile Photo" class="profile-image" onerror="this.src='/assets/images/default-avatar.png'">
+        <h3 class="sidebar-name">Lin Yang Sen</h3>
+        <p class="sidebar-title">Music & Mood Explorer</p>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <ul>
+          <li><a href="/" class="sidebar-nav-item">
+            <span class="sidebar-icon">🏠</span>
+            <span class="sidebar-label">Home</span>
+          </a></li>
+          <li><a href="/blog" class="sidebar-nav-item">
+            <span class="sidebar-icon">📝</span>
+            <span class="sidebar-label">Blog</span>
+          </a></li>
+          <li><a href="/music-station" class="sidebar-nav-item">
+            <span class="sidebar-icon">🎵</span>
+            <span class="sidebar-label">Music Station</span>
+          </a></li>
+          <li><a href="/about" class="sidebar-nav-item">
+            <span class="sidebar-icon">ℹ️</span>
+            <span class="sidebar-label">About</span>
+          </a></li>
+        </ul>
+      </nav>
+      
+      <div class="sidebar-footer">
+        <div class="social-links">
+          <a href="https://github.com/tommy60718" class="social-link">
+            <span class="sidebar-icon">GitHub</span>
+          </a>
+          <a href="mailto:tommyforwork@gmail.com" class="social-link">
+            <span class="sidebar-icon">Email</span>
+          </a>
+        </div>
+        <p class="copyright">&copy; 2025 Lin Yang Sen</p>
+      </div>
+    </aside>
+    
+    <!-- Main Content Area -->
+    <div class="main-content">
+      <main class="content">
+        <div class="music-station-page">
+  <div class="hero-section">
+    <h1>Music Station</h1>
+    <p class="lead">Your central hub for music playback and guitar learning resources</p>
+  </div>
+  
+  <div class="station-nav">
+    <a href="/music-station/player" class="station-nav-item">
+      <span class="nav-icon">🎵</span>
+      <span class="nav-label">Music Player</span>
+    </a>
+    <a href="/music-station/guitar-sheets" class="station-nav-item">
+      <span class="nav-icon">🎸</span>
+      <span class="nav-label">Guitar Sheets</span>
+    </a>
+  </div>
+  
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-icon">🎵</div>
+      <h2>Music Player</h2>
+      <p>Listen to mood-based playlists with visualizations that enhance your musical experience.</p>
+      <a href="/music-station/player" class="feature-link">Open Player</a>
+    </div>
+    
+    <div class="feature-card">
+      <div class="feature-icon">🎸</div>
+      <h2>Guitar Sheets</h2>
+      <p>Browse guitar tabs, chord sheets, and learning resources organized by difficulty level.</p>
+      <a href="/music-station/guitar-sheets" class="feature-link">View Sheets</a>
+    </div>
+  </div>
+</div> 
+      </main>
+      
+      <footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2025 Lin Yang Sen. All rights reserved.</p>
+    <p>Connect with me: 
+      <a href="mailto:tommyforwork@gmail.com">Email</a> | 
+      <a href="https://github.com/tommy60718">GitHub</a>
+    </p>
+  </div>
+</footer> 
+    </div>
+  </div>
+  
+  <script src="/assets/js/main.js"></script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const path = window.location.pathname;
+      const navItems = document.querySelectorAll('.sidebar-nav-item');
+      
+      navItems.forEach(item => {
+        const href = item.getAttribute('href');
+        if (path === href || path.startsWith(href) && href !== '/') {
+          item.classList.add('active');
+        }
+      });
+      
+      if (document.querySelector('.station-nav')) {
+        const stationItems = document.querySelectorAll('.station-nav-item');
+        stationItems.forEach(item => {
+          if (path === item.getAttribute('href') || path.startsWith(item.getAttribute('href'))) {
+            item.classList.add('active');
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html> 

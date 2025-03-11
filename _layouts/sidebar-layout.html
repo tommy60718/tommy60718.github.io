@@ -14,7 +14,7 @@
     <!-- Left Sidebar -->
     <aside class="sidebar">
       <div class="sidebar-profile">
-        <img src="/assets/images/profile.jpg" alt="Profile Photo" class="profile-image">
+        <img src="/assets/images/profile.jpg" alt="Profile Photo" class="profile-image" onerror="this.src='/assets/images/default-avatar.png'">
         <h3 class="sidebar-name">Lin Yang Sen</h3>
         <p class="sidebar-title">Music & Mood Explorer</p>
       </div>
@@ -64,5 +64,28 @@
   </div>
   
   <script src="/assets/js/main.js"></script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const path = window.location.pathname;
+      const navItems = document.querySelectorAll('.sidebar-nav-item');
+      
+      navItems.forEach(item => {
+        const href = item.getAttribute('href');
+        if (path === href || path.startsWith(href) && href !== '/') {
+          item.classList.add('active');
+        }
+      });
+      
+      if (document.querySelector('.station-nav')) {
+        const stationItems = document.querySelectorAll('.station-nav-item');
+        stationItems.forEach(item => {
+          if (path === item.getAttribute('href') || path.startsWith(item.getAttribute('href'))) {
+            item.classList.add('active');
+          }
+        });
+      }
+    });
+  </script>
 </body>
 </html> 

@@ -8,6 +8,29 @@ document.addEventListener('DOMContentLoaded', function() {
   if (document.querySelector('.blog-index')) {
     // Blog-specific JS could go here
   }
+  
+  // Handle Music Station navigation
+  if (document.querySelector('.music-station-page')) {
+    // Highlight active section
+    const currentPath = window.location.pathname;
+    const navItems = document.querySelectorAll('.station-nav-item');
+    
+    navItems.forEach(item => {
+      const href = item.getAttribute('href');
+      if (currentPath === href || currentPath.startsWith(href)) {
+        item.classList.add('active');
+      } else {
+        item.classList.remove('active');
+      }
+    });
+  }
+  
+  // Dynamically load guitar-sheets.js if on guitar sheets page
+  if (document.querySelector('.guitar-sheets-page')) {
+    const script = document.createElement('script');
+    script.src = '/assets/js/guitar-sheets.js';
+    document.body.appendChild(script);
+  }
 });
 
 function initMusicPlayer() {

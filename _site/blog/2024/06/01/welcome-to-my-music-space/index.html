@@ -6,9 +6,10 @@
   <title>Welcome to My Music & Mood Space | Lin Yang Sen's Music & Mood Station</title>
   <link rel="stylesheet" href="/assets/css/main.css">
   <link rel="stylesheet" href="/assets/css/sidebar.css">
+  <link rel="stylesheet" href="/assets/css/music-station.css">
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Welcome to My Music &amp; Mood Space | Lin Yang Sen’s Music &amp; Mood Station</title>
-<meta name="generator" content="Jekyll v4.4.1" />
+<meta name="generator" content="Jekyll v4.3.4" />
 <meta property="og:title" content="Welcome to My Music &amp; Mood Space" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Welcome to my new Music &amp; Mood Station! This space is dedicated to my journey with music, learning guitar, and exploring how different sounds affect my mood and productivity." />
@@ -30,7 +31,7 @@
     <!-- Left Sidebar -->
     <aside class="sidebar">
       <div class="sidebar-profile">
-        <img src="/assets/images/profile.jpg" alt="Profile Photo" class="profile-image">
+        <img src="/assets/images/profile.jpg" alt="Profile Photo" class="profile-image" onerror="this.src='/assets/images/default-avatar.png'">
         <h3 class="sidebar-name">Lin Yang Sen</h3>
         <p class="sidebar-title">Music & Mood Explorer</p>
       </div>
@@ -45,13 +46,9 @@
             <span class="sidebar-icon">📝</span>
             <span class="sidebar-label">Blog</span>
           </a></li>
-          <li><a href="/music-player" class="sidebar-nav-item">
+          <li><a href="/music-station" class="sidebar-nav-item">
             <span class="sidebar-icon">🎵</span>
-            <span class="sidebar-label">Music Player</span>
-          </a></li>
-          <li><a href="/guitar-sheets" class="sidebar-nav-item">
-            <span class="sidebar-icon">🎸</span>
-            <span class="sidebar-label">Guitar Sheets</span>
+            <span class="sidebar-label">Music Station</span>
           </a></li>
           <li><a href="/about" class="sidebar-nav-item">
             <span class="sidebar-icon">ℹ️</span>
@@ -151,5 +148,28 @@
   </div>
   
   <script src="/assets/js/main.js"></script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const path = window.location.pathname;
+      const navItems = document.querySelectorAll('.sidebar-nav-item');
+      
+      navItems.forEach(item => {
+        const href = item.getAttribute('href');
+        if (path === href || path.startsWith(href) && href !== '/') {
+          item.classList.add('active');
+        }
+      });
+      
+      if (document.querySelector('.station-nav')) {
+        const stationItems = document.querySelectorAll('.station-nav-item');
+        stationItems.forEach(item => {
+          if (path === item.getAttribute('href') || path.startsWith(item.getAttribute('href'))) {
+            item.classList.add('active');
+          }
+        });
+      }
+    });
+  </script>
 </body>
 </html> 
