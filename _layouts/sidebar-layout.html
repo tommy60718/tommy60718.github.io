@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/sidebar.css">
+  {% seo %}
+</head>
+<body class="sidebar-layout">
+  <div class="site-container">
+    <!-- Left Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-profile">
+        <img src="/assets/images/profile.jpg" alt="Profile Photo" class="profile-image">
+        <h3 class="sidebar-name">Lin Yang Sen</h3>
+        <p class="sidebar-title">Music & Mood Explorer</p>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <ul>
+          <li><a href="/" class="sidebar-nav-item">
+            <span class="sidebar-icon">🏠</span>
+            <span class="sidebar-label">Home</span>
+          </a></li>
+          <li><a href="/blog" class="sidebar-nav-item">
+            <span class="sidebar-icon">📝</span>
+            <span class="sidebar-label">Blog</span>
+          </a></li>
+          <li><a href="/music-player" class="sidebar-nav-item">
+            <span class="sidebar-icon">🎵</span>
+            <span class="sidebar-label">Music Player</span>
+          </a></li>
+          <li><a href="/guitar-sheets" class="sidebar-nav-item">
+            <span class="sidebar-icon">🎸</span>
+            <span class="sidebar-label">Guitar Sheets</span>
+          </a></li>
+          <li><a href="/about" class="sidebar-nav-item">
+            <span class="sidebar-icon">ℹ️</span>
+            <span class="sidebar-label">About</span>
+          </a></li>
+        </ul>
+      </nav>
+      
+      <div class="sidebar-footer">
+        <div class="social-links">
+          <a href="https://github.com/tommy60718" class="social-link">
+            <span class="sidebar-icon">GitHub</span>
+          </a>
+          <a href="mailto:tommyforwork@gmail.com" class="social-link">
+            <span class="sidebar-icon">Email</span>
+          </a>
+        </div>
+        <p class="copyright">&copy; {{ site.time | date: '%Y' }} Lin Yang Sen</p>
+      </div>
+    </aside>
+    
+    <!-- Main Content Area -->
+    <div class="main-content">
+      <main class="content">
+        {{ content }}
+      </main>
+      
+      {% include footer.html %}
+    </div>
+  </div>
+  
+  <script src="/assets/js/main.js"></script>
+</body>
+</html> 
