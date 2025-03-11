@@ -8,13 +8,23 @@
   {% seo %}
 </head>
 <body>
-  {% include header.html %}
-  
-  <main class="content">
-    {{ content }}
-  </main>
-  
-  {% include footer.html %}
+  <div class="site-container">
+    {% include sidebar.html %}
+    
+    <div class="main-content">
+      <div class="mobile-menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      
+      <main class="content">
+        {{ content }}
+      </main>
+      
+      {% include footer.html %}
+    </div>
+  </div>
   
   <script src="/assets/js/main.js"></script>
 </body>
