@@ -392,4 +392,11 @@ function initMusicPlayer() {
   
   // Set initial volume
   audio.volume = volumeSlider.value / 100;
+}
+
+// Dynamically load guitar-sheets.js if on guitar sheets page
+if (document.querySelector('.guitar-sheets-page')) {
+  const script = document.createElement('script');
+  script.src = '/assets/js/guitar-sheets.js';
+  document.body.appendChild(script);
 } 

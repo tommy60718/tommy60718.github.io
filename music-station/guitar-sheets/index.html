@@ -1,0 +1,145 @@
+---
+layout: sidebar-layout
+title: Guitar Sheets
+---
+
+<div class="music-station-page">
+  <div class="station-nav">
+    <a href="/music-station/player" class="station-nav-item">
+      <span class="nav-icon">🎵</span>
+      <span class="nav-label">Music Player</span>
+    </a>
+    <a href="/music-station/guitar-sheets" class="station-nav-item active">
+      <span class="nav-icon">🎸</span>
+      <span class="nav-label">Guitar Sheets</span>
+    </a>
+  </div>
+
+  <div class="guitar-sheets-page">
+    <h1>Guitar Learning Resources</h1>
+    
+    <div class="sheet-filters">
+      <div class="filter-group">
+        <label for="difficulty-filter">Difficulty:</label>
+        <select id="difficulty-filter" class="filter-select">
+          <option value="all">All Levels</option>
+          <option value="beginner">Beginner</option>
+          <option value="intermediate">Intermediate</option>
+          <option value="advanced">Advanced</option>
+        </select>
+      </div>
+      
+      <div class="filter-group">
+        <label for="type-filter">Type:</label>
+        <select id="type-filter" class="filter-select">
+          <option value="all">All Types</option>
+          <option value="tabs">Tabs</option>
+          <option value="chords">Chord Sheets</option>
+          <option value="theory">Theory Resources</option>
+        </select>
+      </div>
+      
+      <div class="search-group">
+        <input type="text" id="sheet-search" placeholder="Search sheets..." class="search-input">
+      </div>
+    </div>
+    
+    <div class="guitar-sheets-grid">
+      <!-- Beginner Sheets -->
+      <div class="sheet-card" data-difficulty="beginner" data-type="chords">
+        <div class="sheet-icon">🎼</div>
+        <h3>Basic Open Chords</h3>
+        <p class="sheet-meta">
+          <span class="difficulty beginner">Beginner</span>
+          <span class="type">Chord Sheet</span>
+        </p>
+        <p>Learn the fundamental open chords every guitarist should know, including A, E, D, G, and C major.</p>
+        <a href="#" class="sheet-link">View Sheet</a>
+      </div>
+      
+      <div class="sheet-card" data-difficulty="beginner" data-type="tabs">
+        <div class="sheet-icon">🎵</div>
+        <h3>Ode to Joy - Simple Melody</h3>
+        <p class="sheet-meta">
+          <span class="difficulty beginner">Beginner</span>
+          <span class="type">Tab</span>
+        </p>
+        <p>A single-string melody perfect for beginners learning to read tablature and develop finger placement.</p>
+        <a href="#" class="sheet-link">View Tab</a>
+      </div>
+      
+      <!-- Intermediate Sheets -->
+      <div class="sheet-card" data-difficulty="intermediate" data-type="tabs">
+        <div class="sheet-icon">🎸</div>
+        <h3>Pop Song Fingerpicking Pattern</h3>
+        <p class="sheet-meta">
+          <span class="difficulty intermediate">Intermediate</span>
+          <span class="type">Tab + Notation</span>
+        </p>
+        <p>Learn a versatile fingerpicking pattern that can be applied to many popular songs.</p>
+        <a href="#" class="sheet-link">View Sheet</a>
+      </div>
+      
+      <div class="sheet-card" data-difficulty="intermediate" data-type="theory">
+        <div class="sheet-icon">📊</div>
+        <h3>Pentatonic Scale Positions</h3>
+        <p class="sheet-meta">
+          <span class="difficulty intermediate">Intermediate</span>
+          <span class="type">Theory</span>
+        </p>
+        <p>A complete guide to the five positions of the pentatonic scale with practice exercises.</p>
+        <a href="#" class="sheet-link">View Resource</a>
+      </div>
+      
+      <!-- Advanced Sheets -->
+      <div class="sheet-card" data-difficulty="advanced" data-type="tabs">
+        <div class="sheet-icon">🔥</div>
+        <h3>Fingerstyle Arrangement - Canon in D</h3>
+        <p class="sheet-meta">
+          <span class="difficulty advanced">Advanced</span>
+          <span class="type">Tab + Notation</span>
+        </p>
+        <p>A challenging fingerstyle arrangement of Pachelbel's Canon in D with melody and bass lines.</p>
+        <a href="#" class="sheet-link">View Arrangement</a>
+      </div>
+      
+      <div class="sheet-card" data-difficulty="advanced" data-type="theory">
+        <div class="sheet-icon">🧠</div>
+        <h3>Modal Interchange Concepts</h3>
+        <p class="sheet-meta">
+          <span class="difficulty advanced">Advanced</span>
+          <span class="type">Theory</span>
+        </p>
+        <p>Explore how to use chords from parallel modes to add color and emotion to your playing.</p>
+        <a href="#" class="sheet-link">View Resource</a>
+      </div>
+    </div>
+    
+    <div class="progress-tracker">
+      <h2>My Learning Progress</h2>
+      <div class="progress-bar-container">
+        <div class="progress-label">Beginner Materials</div>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 75%;"></div>
+        </div>
+        <div class="progress-percentage">75%</div>
+      </div>
+      
+      <div class="progress-bar-container">
+        <div class="progress-label">Intermediate Materials</div>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 40%;"></div>
+        </div>
+        <div class="progress-percentage">40%</div>
+      </div>
+      
+      <div class="progress-bar-container">
+        <div class="progress-label">Advanced Materials</div>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 10%;"></div>
+        </div>
+        <div class="progress-percentage">10%</div>
+      </div>
+    </div>
+  </div>
+</div> 
