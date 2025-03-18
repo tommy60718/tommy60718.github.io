@@ -12,6 +12,7 @@ A personal website featuring a music player with mood visualizations, guitar lea
 This site is built with Jekyll, a static site generator perfect for GitHub Pages, with a custom sidebar layout design:
 
 tommy60718.github.io/
+
 ├── config.yml # Jekyll configuration
 ├── layouts/ # Page templates (sidebar-layout, etc.)
 ├── includes/ # Reusable components (header, footer)
