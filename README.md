@@ -11,24 +11,24 @@ A personal website featuring a music player with mood visualizations, guitar lea
 
 This site is built with Jekyll, a static site generator perfect for GitHub Pages, with a custom sidebar layout design:
 
+```text
 tommy60718.github.io/
-
-├── config.yml # Jekyll configuration
-├── layouts/ # Page templates (sidebar-layout, etc.)
-├── includes/ # Reusable components (header, footer)
-├── posts/ # Blog content in Markdown format
-├── assets/ # Static files
-│ ├── css/ # Stylesheets
-│ ├── js/ # JavaScript files
-│ └── images/ # Images and artwork
-├── music-station/ # Combined music features
-│ ├── index.html # Hub page
-│ ├── player/ # Music player functionality
-│ └── guitar-sheets/ # Guitar learning resources
-├── music-player/ # Legacy music player
-├── blog/ # Blog section
-└── index.html # Homepage
-
+├── _config.yml          # Jekyll configuration
+├── _layouts/            # Page templates (sidebar-layout, etc.)
+├── _includes/           # Reusable components (header, footer)
+├── _posts/              # Blog content in Markdown format
+├── assets/              # Static files
+│   ├── css/             # Stylesheets
+│   ├── js/              # JavaScript files
+│   └── images/          # Images and artwork
+├── music-station/       # Combined music features
+│   ├── index.html       # Hub page
+│   ├── player/          # Music player functionality
+│   └── guitar-sheets/   # Guitar learning resources
+├── music-player/        # Legacy music player
+├── blog/                # Blog section
+└── index.html           # Homepage
+```
 
 ### Key Features
 
