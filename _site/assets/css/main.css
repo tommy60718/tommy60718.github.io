@@ -518,4 +518,115 @@ body {
   .posts-preview {
     grid-template-columns: 1fr;
   }
+}
+
+/* Blog Card Styles */
+.blog-grid {
+  display: grid;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.blog-card {
+  background: var(--light-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.blog-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.blog-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  padding: 1.5rem;
+}
+
+.blog-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 1rem;
+}
+
+.blog-card-title {
+  margin: 0;
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  flex: 1;
+}
+
+.blog-card-date {
+  font-size: 0.9rem;
+  color: #666;
+  margin-left: 1.5rem;
+}
+
+.blog-card-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.blog-card-category {
+  background: var(--secondary-color);
+  color: var(--light-color);
+  padding: 0.3rem 0.8rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+}
+
+.blog-card-excerpt {
+  color: var(--text-color);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.blog-card-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.read-more {
+  color: var(--primary-color);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.blog-card:hover .read-more {
+  color: var(--secondary-color);
+}
+
+/* Category Filters */
+.category-filters {
+  margin: 2rem 0;
+}
+
+.category-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.category-button {
+  background: var(--light-color);
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  padding: 0.5rem 1.2rem;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.category-button.active,
+.category-button:hover {
+  background: var(--primary-color);
+  color: var(--light-color);
 } 

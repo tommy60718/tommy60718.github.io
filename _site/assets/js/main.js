@@ -56,27 +56,27 @@ function initMusicPlayer() {
   let currentTrackIndex = 0;
   let currentMood = 'calm';
   
-  // Sample playlist - in a real app, this might come from an API or local storage
+  // Sample playlist - using local audio files from assets/audio directory
   const playlist = [
     {
       title: 'Peaceful Waters',
       artist: 'Nature Sounds',
-      src: 'https://files.freemusicarchive.org/storage-freemusicarchive-org/music/ccCommunity/Kai_Engel/Satin/Kai_Engel_-_03_-_Contention.mp3',
-      artwork: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
+      src: '/assets/audio/peaceful_waters.mp3',
+      artwork: '/assets/images/calm_artwork.jpg',
       mood: 'calm'
     },
     {
       title: 'Urban Rhythm',
       artist: 'City Beats',
-      src: 'https://files.freemusicarchive.org/storage-freemusicarchive-org/music/ccCommunity/Kai_Engel/Satin/Kai_Engel_-_04_-_Sentinel.mp3',
-      artwork: 'https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
+      src: '/assets/audio/urban_rhythm.mp3',
+      artwork: '/assets/images/energetic_artwork.jpg',
       mood: 'energetic'
     },
     {
       title: 'Deep Concentration',
       artist: 'Mind Waves',
-      src: 'https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Tours/Enthusiast/Tours_-_01_-_Enthusiast.mp3',
-      artwork: 'https://images.unsplash.com/photo-1468164016595-6108e4c60c8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
+      src: '/assets/audio/deep_concentration.mp3',
+      artwork: '/assets/images/focus_artwork.jpg',
       mood: 'focus'
     }
   ];
@@ -336,78 +336,6 @@ function initMusicPlayer() {
       setMood(button.dataset.mood);
     });
   });
-  
-  // Create mini player functionality
-  function createMiniPlayer() {
-    const miniPlayer = document.createElement('div');
-    miniPlayer.className = 'mini-player';
-    
-    miniPlayer.innerHTML = `
-      <div class="mini-player-artwork">
-        <img id="mini-artwork" src="${playlist[0].artwork}" alt="Track Artwork">
-      </div>
-      <div class="mini-player-info">
-        <h3 id="mini-title">${playlist[0].title}</h3>
-        <p id="mini-artist">${playlist[0].artist}</p>
-      </div>
-      <div class="mini-player-controls">
-        <button id="mini-prev-button" class="mini-player-button">⏮️</button>
-        <button id="mini-play-button" class="mini-player-button">▶️</button>
-        <button id="mini-next-button" class="mini-player-button">⏭️</button>
-      </div>
-    `;
-    
-    document.body.appendChild(miniPlayer);
-    
-    // Mini player elements
-    const miniArtwork = document.getElementById('mini-artwork');
-    const miniTitle = document.getElementById('mini-title');
-    const miniArtist = document.getElementById('mini-artist');
-    const miniPlayButton = document.getElementById('mini-play-button');
-    const miniPrevButton = document.getElementById('mini-prev-button');
-    const miniNextButton = document.getElementById('mini-next-button');
-    
-    // Mini player event listeners
-    miniPlayButton.addEventListener('click', () => {
-      if (isPlaying) {
-        pauseTrack();
-      } else {
-        playTrack();
-      }
-    });
-    
-    miniPrevButton.addEventListener('click', prevTrack);
-    miniNextButton.addEventListener('click', nextTrack);
-    
-    // Show mini player when scrolling down
-    window.addEventListener('scroll', () => {
-      const playerContainer = document.querySelector('.player-container');
-      const playerRect = playerContainer.getBoundingClientRect();
-      
-      if (playerRect.bottom < 0) {
-        miniPlayer.classList.add('visible');
-      } else {
-        miniPlayer.classList.remove('visible');
-      }
-    });
-    
-    // Update mini player info when track changes
-    function updateMiniPlayer() {
-      const track = playlist[currentTrackIndex];
-      miniArtwork.src = track.artwork;
-      miniTitle.textContent = track.title;
-      miniArtist.textContent = track.artist;
-      miniPlayButton.innerHTML = isPlaying ? '⏸️' : '▶️';
-    }
-    
-    // Update mini player when track changes
-    audio.addEventListener('play', updateMiniPlayer);
-    audio.addEventListener('pause', updateMiniPlayer);
-    
-    return updateMiniPlayer;
-  }
-  
-  const updateMiniPlayer = createMiniPlayer();
   
   // Initialize player
   generatePlaylist();

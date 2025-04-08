@@ -20,12 +20,12 @@ tommy60718.github.io/
 ├── assets/              # Static files
 │   ├── css/             # Stylesheets
 │   ├── js/              # JavaScript files
+│   ├── audio/           # Music files
 │   └── images/          # Images and artwork
-├── music-station/       # Combined music features
+├── music-station/       # Music features hub
 │   ├── index.html       # Hub page
 │   ├── player/          # Music player functionality
 │   └── guitar-sheets/   # Guitar learning resources
-├── music-player/        # Legacy music player
 ├── blog/                # Blog section
 └── index.html           # Homepage
 ```

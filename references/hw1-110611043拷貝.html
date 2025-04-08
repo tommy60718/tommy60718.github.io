@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>林楊森的個人首頁 - 110611043</title>
+    <link rel="stylesheet" href="hw1.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="site-header">
+        <div class="container">
+            <div class="site-title">
+                <h1>林楊森的個人網站</h1>
+                <p class="subtitle">JavaScript 作業集</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigator Section -->
+    <nav class="site-nav">
+        <div class="container">
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#" class="active">首頁</a></li>
+                <li><a href="#">作業 1</a></li>
+                <li><a href="#">作業 2</a></li>
+                <li><a href="#">作業 3</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">更多作業</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">作業 4</a></li>
+                        <li><a href="#">作業 5</a></li>
+                        <li><a href="#">作業 6</a></li>
+                        <li><a href="#">期末專案</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Content Section -->
+    <main class="content">
+        <div class="container">
+            <div class="profile-section">
+                <div class="profile-image">
+                    <!-- 請替換為您的個人照片 -->
+                    <img src="IMG_2139.jpg" alt="林楊森的照片">
+                </div>
+                <div class="profile-info">
+                    <h2>基本資料</h2>
+                    <ul>
+                        <li><strong>姓名：</strong>林楊森</li>
+                        <li><strong>學號：</strong>110611043</li>
+                        <li><strong>系所：</strong>機械工程學系</li>
+                        <li><strong>年級：</strong>大四</li>
+                        <li><strong>專業領域：</strong>電腦視覺、無人機應用</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="about-section">
+                <h2>關於我</h2>
+                <p>
+                    目前是交大機械系跨域資工的大四學生，有幸在 Wolley tech 累積了一些韌體開發的實務經驗。參與過台北捷運黑客松，和團隊一起進入決賽並獲得第2名的成績。現在擔任交大 GDG on campus 的 Lead，希望能與更多同學分享技術與經驗。
+                </p>
+                <p>
+                    對於程式應用在實際問題上有濃厚興趣，學習了 Python 的 OpenCV 和 Tello 函式庫來探索影像辨識和無人機控制的可能性。也嘗試過使用 Arduino 開發電動車控制系統。目前有幸在交大「計算攝影實驗室」參與電腦視覺和無人機應用的研究工作。
+                </p>
+                <p>
+                    工作之餘，彈吉他和游泳是我放鬆心情的方式。偶爾的藝術創作讓我保持創意思維，閱讀和觀看運動賽事則是假期的休閒活動。相信平衡的生活能帶來更多靈感，也讓技術創新有了更廣闊的視野。
+                </p>
+            </div>
+
+            <div class="interests-section">
+                <h2>興趣與專長</h2>
+                <div class="interests-grid">
+                    <div class="interest-card">
+                        <div class="interest-icon">💻</div>
+                        <h3>程式開發</h3>
+                        <p>專注於嵌入式系統和電腦視覺應用，熟悉Python、Arduino等開發平台。</p>
+                    </div>
+                    <div class="interest-card">
+                        <div class="interest-icon">✈️</div>
+                        <h3>無人機技術</h3>
+                        <p>研究無人機控制和影像處理，致力於將理論知識應用於實際場景。</p>
+                    </div>
+                    <div class="interest-card">
+                        <div class="interest-icon">🎸</div>
+                        <h3>音樂與藝術</h3>
+                        <p>閒暇時彈吉他放鬆心情，享受藝術創作帶來的平靜與靈感。</p>
+                    </div>
+                    <div class="interest-card">
+                        <div class="interest-icon">🏊</div>
+                        <h3>運動與閱讀</h3>
+                        <p>熱愛游泳和觀看運動賽事，也透過閱讀拓展視野和知識。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 林楊森. 版權所有.</p>
+            <p>
+                聯絡方式: 
+                <a href="mailto:tommy60718.en10@nycu.edu.tw">tommy60718.en10@nycu.edu.tw</a> | 
+                <a href="https://github.com/tommy60718" target="_blank">GitHub</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for dropdown menu
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            // Toggle main menu on hamburger click
+            menuToggle.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+                menuToggle.classList.toggle('active');
+            });
+
+            // Handle all dropdown toggles
+            const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+            dropdownToggles.forEach(toggle => {
+                toggle.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Close other open dropdowns
+                    dropdownToggles.forEach(otherToggle => {
+                        if (otherToggle !== toggle && window.innerWidth <= 480) {
+                            otherToggle.nextElementSibling.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle this dropdown
+                    this.nextElementSibling.classList.toggle('active');
+                });
+            });
+            
+            // Close menu when clicking outside
+            document.addEventListener('click', function(e) {
+                const isMenuToggleClicked = menuToggle.contains(e.target);
+                const isNavMenuClicked = navMenu.contains(e.target);
+                
+                if (!isMenuToggleClicked && !isNavMenuClicked && navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
+                    menuToggle.classList.remove('active');
+                }
+            });
+            
+            // Handle window resize
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 480) {
+                    // Reset menu states when returning to desktop size
+                    navMenu.classList.remove('active');
+                    menuToggle.classList.remove('active');
+                    document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                        menu.classList.remove('active');
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html> 

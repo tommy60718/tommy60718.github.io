@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="/assets/css/main.css">
   <link rel="stylesheet" href="/assets/css/sidebar.css">
   <link rel="stylesheet" href="/assets/css/music-station.css">
+  
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Blog | Lin Yang Sen’s Music &amp; Mood Station</title>
 <meta name="generator" content="Jekyll v4.3.4" />
@@ -75,34 +76,45 @@
         <div class="blog-index">
   <h1>Blog</h1>
   
-  <div class="categories">
-    <h3>Categories:</h3>
-    <ul>
-      <li><a href="/blog/categories/music-reviews">Music Reviews</a></li>
-      <li><a href="/blog/categories/mood-journals">Mood Journals</a></li>
-      <li><a href="/blog/categories/learning-progress">Learning Progress</a></li>
-    </ul>
+  <div class="category-filters">
+    <h3>Filter by Category:</h3>
+    <div class="category-buttons">
+      <button class="category-button active" data-category="all">All</button>
+      <button class="category-button" data-category="music-reviews">Music Reviews</button>
+      <button class="category-button" data-category="mood-journals">Mood Journals</button>
+      <button class="category-button" data-category="learning-progress">Learning Progress</button>
+    </div>
   </div>
 
-  
-  <article class="post">
-    <h2><a href="/blog/2024/06/01/welcome-to-my-music-space/">Welcome to My Music & Mood Space</a></h2>
-    <span class="post-date">June 01, 2024</span>
+  <div class="blog-grid">
     
-    <div class="categories">
-      
-      <span class="category"><a href="/blog/categories/mood-journals">mood-journals</a></span>
-      
-    </div>
-    
-    <div class="excerpt">
-      <p>Welcome to my new Music &amp; Mood Station! This space is dedicated to my journey with music, learning guitar, and exploring how different sounds affect my mood and productivity.</p>
+    <article class="blog-card" data-categories="mood-journals">
+      <a href="/blog/2024/06/01/welcome-to-my-music-space/" class="blog-card-link">
+        <div class="blog-card-content">
+          <div class="blog-card-header">
+            <h2 class="blog-card-title">Welcome to My Music & Mood Space</h2>
+            <span class="blog-card-date">June 01, 2024</span>
+          </div>
+          
+          <div class="blog-card-categories">
+            
+            <span class="blog-card-category">mood-journals</span>
+            
+          </div>
+          
+          <div class="blog-card-excerpt">
+            Welcome to my new Music &amp; Mood Station! This space is dedicated to my journey with music, learning guitar, and exploring how different sounds affect my mood and productivity.
 
-    </div>
+          </div>
+          
+          <div class="blog-card-footer">
+            <span class="read-more">Read More →</span>
+          </div>
+        </div>
+      </a>
+    </article>
     
-    <a href="/blog/2024/06/01/welcome-to-my-music-space/" class="read-more">Read More</a>
-  </article>
-  
+  </div>
   
   <!-- Pagination links -->
   <div class="pagination">

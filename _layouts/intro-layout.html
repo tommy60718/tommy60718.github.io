@@ -3,30 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home | Lin Yang Sen's Music & Mood Station</title>
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
   <link rel="stylesheet" href="/assets/css/main.css">
   <link rel="stylesheet" href="/assets/css/sidebar.css">
   <link rel="stylesheet" href="/assets/css/music-station.css">
   <link rel="stylesheet" href="/assets/css/intro-animation.css">
-  
+  {% if page.title == "About" %}
+  <link rel="stylesheet" href="/assets/css/about.css">
+  {% endif %}
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-  <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Home | Lin Yang Sen’s Music &amp; Mood Station</title>
-<meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="Home" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="A personal space for music, guitar learning, and mood journaling" />
-<meta property="og:description" content="A personal space for music, guitar learning, and mood journaling" />
-<link rel="canonical" href="http://localhost:4000/" />
-<meta property="og:url" content="http://localhost:4000/" />
-<meta property="og:site_name" content="Lin Yang Sen’s Music &amp; Mood Station" />
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Home" />
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","description":"A personal space for music, guitar learning, and mood journaling","headline":"Home","name":"Lin Yang Sen’s Music &amp; Mood Station","url":"http://localhost:4000/"}</script>
-<!-- End Jekyll SEO tag -->
-
+  {% seo %}
 </head>
 <body class="intro-layout">
   <!-- Intro Animation Container -->
@@ -87,75 +73,17 @@
             <span class="sidebar-icon">Email</span>
           </a>
         </div>
-        <p class="copyright">&copy; 2025 Lin Yang Sen</p>
+        <p class="copyright">&copy; {{ site.time | date: '%Y' }} Lin Yang Sen</p>
       </div>
     </aside>
     
     <!-- Main Content Area -->
     <div class="main-content">
       <main class="content">
-        <div class="home-page">
-  <div class="hero-section">
-    <h1>Welcome to My Music & Mood Station</h1>
-    <p class="lead">Explore the connection between music, mood, and creativity</p>
-  </div>
-  
-  <div class="features-grid">
-    <div class="feature-card">
-      <div class="feature-icon">🎵</div>
-      <h2>Music Player</h2>
-      <p>Listen to mood-based playlists with custom visualizations that enhance your experience.</p>
-      <a href="/music-station/player" class="feature-link">Explore Player</a>
-    </div>
-    
-    <div class="feature-card">
-      <div class="feature-icon">📝</div>
-      <h2>Mood Journals</h2>
-      <p>Read about how different music influences mood, productivity, and creativity.</p>
-      <a href="/blog/categories/mood-journals" class="feature-link">Read Journals</a>
-    </div>
-    
-    <div class="feature-card">
-      <div class="feature-icon">🎸</div>
-      <h2>Guitar Learning</h2>
-      <p>Follow my journey learning guitar with resources, progress notes, and sheet music.</p>
-      <a href="/music-station/guitar-sheets" class="feature-link">View Resources</a>
-    </div>
-    
-    <div class="feature-card">
-      <div class="feature-icon">🔍</div>
-      <h2>Music Reviews</h2>
-      <p>Discover new music through detailed reviews and mood-based recommendations.</p>
-      <a href="/blog/categories/music-reviews" class="feature-link">Read Reviews</a>
-    </div>
-  </div>
-  
-  <div class="recent-posts">
-    <h2>Recent Blog Posts</h2>
-    <div class="posts-preview">
-      
-      <div class="post-preview">
-        <h3><a href="/blog/2024/06/01/welcome-to-my-music-space/">Welcome to My Music & Mood Space</a></h3>
-        <span class="post-date">June 01, 2024</span>
-        <p>Welcome to my new Music &amp; Mood Station! This space is dedicated to my journey with music, learning guitar, and exploring how different sounds affect my mood and productivity.
-</p>
-        <a href="/blog/2024/06/01/welcome-to-my-music-space/" class="read-more">Read More</a>
-      </div>
-      
-    </div>
-  </div>
-</div> 
+        {{ content }}
       </main>
       
-      <footer class="site-footer">
-  <div class="container">
-    <p>&copy; 2025 Lin Yang Sen. All rights reserved.</p>
-    <p>Connect with me: 
-      <a href="mailto:tommyforwork@gmail.com">Email</a> | 
-      <a href="https://github.com/tommy60718">GitHub</a>
-    </p>
-  </div>
-</footer> 
+      {% include footer.html %}
     </div>
   </div>
   
